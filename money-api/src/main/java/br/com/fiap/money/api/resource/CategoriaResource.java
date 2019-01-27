@@ -31,8 +31,8 @@ public class CategoriaResource {
 	private ApplicationEventPublisher publisher;
 	
 	@GetMapping
-	public List<Categoria> listar() {
-		return categoriaRepository.findAll();
+	public ResponseEntity<List<Categoria>> listar() {
+		return ResponseEntity.ok(categoriaRepository.findAll());
 	}
 	
 	@PostMapping
