@@ -5,9 +5,11 @@ import org.springframework.data.domain.Pageable;
 
 import br.com.fiap.money.api.model.Lancamento;
 import br.com.fiap.money.api.repository.filter.LancamentoFilter;
+import br.com.fiap.money.api.repository.projection.ResumoLancamento;
 
 public interface LancamentoRepositoryQuery {
 
 	public Page<Lancamento> filtrar(LancamentoFilter lancamentoFilter, Pageable pageable);
+	public Page<ResumoLancamento> resumir(LancamentoFilter lancamentoFilter, Pageable pageable);
 
 }
